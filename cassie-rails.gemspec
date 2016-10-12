@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'cassie-rails'
-  s.version     = '1.0.0.beta.3'
+  s.version     = '1.0.0.beta.4'
   s.summary     = "Rails Integration for Apache Cassandra application support"
   s.description = <<-EOS.strip.gsub(/\s+/, ' ')
     cassie-rails provides database configration, versioned migrations,
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/eprothro/cassie-rails'
   s.license     = 'MIT'
 
-  s.add_runtime_dependency 'cassie', '~> 1.0.0.a'
+  s.add_runtime_dependency 'cassie', '~> 1.0.0.beta.21'
   s.add_runtime_dependency 'rails', '>= 3.2'
 
   s.add_development_dependency 'rspec', '~> 3.4'
