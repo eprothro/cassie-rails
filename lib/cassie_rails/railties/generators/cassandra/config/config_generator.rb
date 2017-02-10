@@ -1,3 +1,4 @@
+require 'cassie/tasks'
 module Cassandra
   class ConfigGenerator < Rails::Generators::Base
 
@@ -7,11 +8,12 @@ module Cassandra
       else
         puts green("[new] creating '#{file}'")
 
-        opts = {
-          app_name: app_name,
-          destination_path: config_file_path
-        }
-        Cassie::Configuration::Generator.new(opts).save
+        Cassie::Tasks::TaskRunner.new
+        args = ["configuration:generate"]
+        args += ['--name', app_name]
+        args += ['--path', config_file_path]
+
+        Cassie::Tasks::TaskRunner.new.run_command(args)
       end
     end
 
@@ -26,7 +28,7 @@ module Cassandra
     end
 
     def file
-      'config/cassandra.yml'
+      Cassie.paths["cluster_configurations"]
     end
 
     def app_name

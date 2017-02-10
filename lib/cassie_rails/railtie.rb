@@ -10,5 +10,9 @@ module CassieRails
     initializer "cassie-rails.set_env" do
       Cassie.env = Rails.env
     end
+
+    rake_tasks do
+      require 'cassie/tasks'
+    end
   end
 end
