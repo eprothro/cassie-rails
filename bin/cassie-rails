@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# Load the Rails environment in case:
+#  * config files contain references that require rails loading
+#  * initializers configure Cassie options or override behavior
+#  * other initialization is required for Cassie to connect correctly
+rails_root =  Dir.pwd
+environment = File.expand_path("config/environment", rails_root)
+require environment
+
+# Delegate execution to cassie binary.
+# cassie-rails shimply shimming cassie makes a consistent
+# interface easier, and make future upgrades/changes simpler
+which = Cassie::Support::SystemCommand.new("which", ["cassie"])
+which.succeed
+bin_path = which.output.tr("\n", '')
+
+load bin_path

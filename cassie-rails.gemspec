@@ -16,8 +16,10 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/eprothro/cassie-rails'
   s.license     = 'MIT'
 
-  s.add_runtime_dependency 'cassie', '~> 1.0', ">= 1.0.1"
+  s.add_runtime_dependency 'cassie', '~> 1.0', ">= 1.0.2"
   s.add_runtime_dependency 'rails', '>= 3.2'
+
+  s.executables << "cassie-rails"
 
   s.add_development_dependency "bundler", "~> 1.10"
 end
