@@ -5,10 +5,9 @@ Gem::Specification.new do |s|
   s.version     = Cassie::Rails::VERSION
   s.summary     = "Rails Integration for Apache Cassandra application support"
   s.description = <<-EOS.strip.gsub(/\s+/, ' ')
-    cassie-rails provides database configration, versioned migrations,
-    efficient session management, and query classes. This allows Rails applications
-    to use the functionality provided by the official `cassandra-driver` through
-    lightweight and easy to use interfaces.
+    Rails application support for Apache Cassandra using the the official `cassandra-driver`.
+    Provides cluster configration, versioned migrations, efficient session management,
+    and a class-based query DSL. Easy to use with lightweight, component-style interfaces.
   EOS
   s.authors     = ["Evan Prothro"]
   s.email       = 'evan.prothro@gmail.com'
