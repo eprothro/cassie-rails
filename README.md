@@ -8,7 +8,7 @@ See the Cassie [README](https://github.com/eprothro/cassie) for information on u
 
 ```ruby
 # Gemfile
-gem 'cassie-rails', '~> 1.0.2'
+gem 'cassie-rails', '~> 1.0.4'
 ```
 or
 ```bash
